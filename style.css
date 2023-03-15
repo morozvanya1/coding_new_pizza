@@ -48,6 +48,8 @@ header {
     height: 38px;
     
     cursor: pointer;
+
+    -webkit-transition: 2s ease;
 }
 
 .header-logo-img img:hover {
@@ -88,6 +90,8 @@ header {
 
     padding: 15px 35px;
     border-radius: 30px;
+
+    -webkit-transition: 0.5s ease;
 }
 
 .basket-content:hover {
@@ -154,7 +158,7 @@ header {
     margin-right: 15px;
     margin-bottom: 15px;
     padding: 15px 35px;
-    border-radius: 30px;
+    border-radius: 40px;
 
     color: rgba(0, 0, 0, 0.9);
     background: rgba(0, 0, 0, 0.05);
@@ -170,6 +174,8 @@ header {
     flex-direction: row;
 
     align-items: center;
+
+    position: relative;
 }
 
 .content-sort img {
@@ -180,6 +186,8 @@ header {
     cursor: pointer;
 
     opacity: 0.9;
+
+    -webkit-transition: 0.2s ease;
 }
 
 .content-sort p {
@@ -196,8 +204,41 @@ header {
     border-bottom: 1px dashed rgb(255, 113, 12);
 }
 
+/* content-sort-types */
+
 .content-sort-types {
-    display: none;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 35px;
+    right: 0;
+
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    box-shadow: 0 4px 8px 0 rgba(255, 113, 12, 0.2), 0 6px 20px 0 rgba(255, 113, 12, 0.19);
+    -webkit-transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.content-sort-types p {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content-sort-types p:last-child {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.content-sort-types p:hover {
+    background: rgba(255, 113, 12, 0.1);
+    color: rgb(255, 113, 12);
+
+    transition-duration: 0.2s;
 }
 
 /* content-description */
@@ -277,6 +318,30 @@ header {
     border-radius: 10px;
 }
 
+/* later */
+
+.active-2 {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.active-3 {
+    background: rgb(255, 113, 12);
+    border-radius: 15px;
+    color: white !important;
+}
+
+.active-4 {
+    display: none;
+}
+
+.filter-arrow:hover {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+/* later */
+
 .content-description-settings-size {
     display: flex;
     flex-direction: row;
@@ -315,7 +380,6 @@ header {
     align-items: center;
 
     border: 2px solid rgb(255, 113, 12);
-    padding: 5px 5px 5px 10px;
     border-radius: 20px;
 
     font-size: 16px;
@@ -326,7 +390,8 @@ header {
 
 .content-description-add-text {
     color: rgb(255, 113, 12);
-    padding-right: 5px;
+
+    padding: 10px 15px;
 }
 
 .content-description-add-count {
@@ -334,5 +399,6 @@ header {
     background: rgb(255, 113, 12);
 
     padding: 5px 11px;
-    border-radius: 20px;
+    margin: 5px 5px 5px 0;
+    border-radius: 50px;
 }
